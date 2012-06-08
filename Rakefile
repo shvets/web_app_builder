@@ -7,7 +7,7 @@ require "web_app_builder/version"
 require "gemspec_deps_gen/gemspec_deps_gen"
 
 def version
-  ShadowDbCredentials::VERSION
+  WebAppBuilder::VERSION
 end
 
 def project_name
