@@ -1,1 +1,1 @@
-require "web_app_builder"
+require "web_app_builder/web_app_builder"
