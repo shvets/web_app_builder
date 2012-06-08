@@ -1,0 +1,1 @@
+require "web_app_builder"
