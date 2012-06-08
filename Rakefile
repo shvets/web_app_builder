@@ -3,7 +3,7 @@
 $LOAD_PATH.unshift File.expand_path("lib", File.dirname(__FILE__))
 
 require "rspec/core/rake_task"
-require "shadow_db_credentials/version"
+require "web_app_builder/version"
 require "gemspec_deps_gen/gemspec_deps_gen"
 
 def version
