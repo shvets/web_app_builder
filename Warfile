@@ -1,0 +1,22 @@
+#rails_env = "development"
+rails_env = "production"
+
+ant_home = ENV['ANT_HOME'] || "#{ENV['HOME']}/apache-ant-1.8.3"
+
+project_name = "web_app_builder_test"
+
+#jndi_name = "rails_app_tmpl_#{rails_env}"
+#jndi_resource_name = 'jdbc/rails_app_tmpl'
+
+gems_to_reject = %w(bundler)
+
+groups_to_reject = %w(test)
+groups_to_reject << 'development' unless %w(development staging).include? rails_env.to_sym
+
+author = "Alexander Shvets"
+
+#additional_java_jars = ["#{ENV['DB_DRIVERS_DIR']}/ojdbc6.jar"]
+
+templates_dir = "config/templates"
+
+

@@ -3,24 +3,31 @@ require 'meta_methods'
 
 require 'file_utils/file_utils'
 require 'zip_dsl/zip_dsl'
+require 'zip_dsl/zip_writer'
 require 'directory_builder'
 
 class WebAppBuilder
   include MetaMethods
   include FileUtils
 
-  JRUBY_JARS_VERSION         = Gem.loaded_specs["jruby-jars"].version
-  JRUBY_RACK_VERSION         = Gem.loaded_specs["jruby-rack"].version
-  JRUBY_OPENSSL_VERSION      = Gem.loaded_specs["jruby-openssl"].version
-  BOUNCY_CASTLE_JAVA_VERSION = Gem.loaded_specs["bouncy-castle-java"].version
-
   WARFILE_NAME = "Warfile"
 
-  attr_reader :basedir, :build_dir, :config
+  #JRUBY_JARS_VERSION         = Gem.loaded_specs["jruby-jars"].version
+  #JRUBY_RACK_VERSION         = Gem.loaded_specs["jruby-rack"].version
+  #JRUBY_OPENSSL_VERSION      = Gem.loaded_specs["jruby-openssl"].version
+  #BOUNCY_CASTLE_JAVA_VERSION = Gem.loaded_specs["bouncy-castle-java"].version
 
-  def initialize basedir, build_dir
-    @basedir = basedir
+  JRUBY_JARS_VERSION         = "1"
+  JRUBY_RACK_VERSION         = "1"
+  JRUBY_OPENSSL_VERSION      = "0.7.6.1"
+  BOUNCY_CASTLE_JAVA_VERSION = "1.5.0146.1"
+
+  attr_reader :build_dir, :basedir, :config
+
+  def initialize build_dir, basedir, gemset_name
     @build_dir = build_dir
+    @basedir = File.expand_path(basedir)
+    @gemset_name = gemset_name
   end
 
   def configure
@@ -36,9 +43,7 @@ class WebAppBuilder
   def prepare
     create_directory build_dir
 
-    process_templates
-
-    puts "RAILS_ENV: #{config[:rails_env]}"
+    process_templates "#@basedir/#{config[:templates_dir]}"
   end
 
   def war
@@ -47,16 +52,22 @@ class WebAppBuilder
     gems = bundler_gems
 
     # binding
-    build_dir = @build_dir
-    gem_home = gem_home()
-    global_gem_home = global_gem_home()
-    config = @config
-    ruby_home = ruby_home()
-    included_global_gems = included_global_gems()
-    included_global_specs = included_global_specs()
-    included_gems = included_gems(gems)
-    included_specs = included_specs(gems)
-    jars = jars(gems)
+    #build_dir = @build_dir
+    #gem_home = gem_home()
+    #global_gem_home = global_gem_home()
+    #config = @config
+    #ruby_home = ruby_home()
+    ##included_global_gems = included_global_gems()
+    ##included_global_specs = included_global_specs()
+    #included_gems = included_gems(gems)
+    #included_specs = included_specs(gems)
+    #jars = jars(gems)
+    ##basedir = basedir()
+
+
+    global_gem_home = global_gem_home(@gemset_name)
+
+    p global_gem_home
 
     manifest = <<-TEXT
 Built-By: web_app_builder
@@ -73,11 +84,13 @@ Created-By: #{config[:author]}
       directory :from_dir => "lib", :to_dir => "WEB-INF/lib", :filter => "*.rb"
       directory :from_dir => "vendor", :to_dir => "WEB-INF/vendor"
 
-      directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems
+      directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems(gems)
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-                :filter => included_specs
-      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_global_gems
-      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications", :filter => included_global_specs
+                :filter => included_specs(gems)
+      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
+      :filter => included_global_gems
+      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
+      :filter => included_global_specs
 
       directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{JRUBY_OPENSSL_VERSION}/lib/shared",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
@@ -94,12 +107,12 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/gems/jruby-rack-#{JRUBY_RACK_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{gem_home}/gems/jruby-jars-#{JRUBY_JARS_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
-      jars.each do |jar|
+      jars(gems).each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      file :name => "Gemfile", :to_dir => "WEB-INF"
-      file :name => "Gemfile.lock", :to_dir => "WEB-INF"
+      file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
+      file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
 
       directory :from_dir => "public"
 
@@ -115,16 +128,19 @@ Created-By: #{config[:author]}
     gems = bundler_gems
 
     # binding
-    build_dir = @build_dir
-    gem_home = gem_home()
-    global_gem_home = global_gem_home()
-    config = @config
-    ruby_home = ruby_home()
-    included_global_gems = included_global_gems()
-    included_global_specs = included_global_specs()
-    included_gems = included_gems(gems)
-    included_specs = included_specs(gems)
-    jars = jars(gems)
+    #build_dir = @build_dir
+    #gem_home = gem_home()
+    #global_gem_home = global_gem_home()
+    #config = @config
+    #ruby_home = ruby_home()
+    ##included_global_gems = included_global_gems()
+    ##included_global_specs = included_global_specs()
+    #included_gems = included_gems(gems)
+    #included_specs = included_specs(gems)
+    #jars = jars(gems)
+    #basedir = basedir()
+
+    global_gem_home = global_gem_home(@gemset_name)
 
     builder = DirectoryBuilder.new to_dir
 
@@ -137,11 +153,13 @@ Created-By: #{config[:author]}
       directory :from_dir => "lib", :to_dir => "WEB-INF/lib", :filter => "*.rb"
       directory :from_dir => "vendor", :to_dir => "WEB-INF/vendor"
 
-      directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems
+      directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems(gems)
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-                :filter => included_specs
-      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_global_gems
-      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications", :filter => included_global_specs
+                :filter => included_specs(gems)
+      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
+      :filter => included_global_gems
+      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
+      :filter => included_global_specs
 
       directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{JRUBY_OPENSSL_VERSION}/lib/shared",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
@@ -158,12 +176,12 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/gems/jruby-rack-#{JRUBY_RACK_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{gem_home}/gems/jruby-jars-#{JRUBY_JARS_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
-      jars.each do |jar|
+      jars(gems).each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      file :name => "Gemfile", :to_dir => "WEB-INF"
-      file :name => "Gemfile.lock", :to_dir => "WEB-INF"
+      file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
+      file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
 
       directory :from_dir => "public"
 
@@ -171,32 +189,32 @@ Created-By: #{config[:author]}
     end
   end
 
-  def process_templates
+  def process_templates dir
     configure
 
-    process_dir(config[:templates_dir]) do |entry_name|
+    process_dir(dir) do |entry_name|
       if entry_name == "META-INF"
-        process_dir("#{config[:templates_dir]}/META-INF") do |entry_name2|
-          new_content = substitute_vars("#{config[:templates_dir]}/META-INF/#{entry_name2}")
+        process_dir("#{dir}/META-INF") do |entry_name2|
+          new_content = substitute_vars("#{dir}/META-INF/#{entry_name2}")
 
           create_directory "#{build_dir}/META-INF/"
 
           write_content_to_file new_content, "#{build_dir}/META-INF/#{entry_name2}"
         end
       elsif entry_name == "WEB-INF"
-        process_dir("#{config[:templates_dir]}/WEB-INF") do |entry_name2|
-          new_content = substitute_vars("#{config[:templates_dir]}/WEB-INF/#{entry_name2}")
+        process_dir("#{dir}/WEB-INF") do |entry_name2|
+          new_content = substitute_vars("#{dir}/WEB-INF/#{entry_name2}")
 
           create_directory "#{build_dir}/WEB-INF/"
 
           write_content_to_file new_content, "#{build_dir}/WEB-INF/#{entry_name2}"
         end
       else
-        new_content = substitute_vars("#{config[:templates_dir]}/#{entry_name}")
+        new_content = substitute_vars("#{dir}/#{entry_name}")
 
         write_content_to_file new_content, "#{build_dir}/#{entry_name}"
       end
-    end
+    end if File.exist?(dir)
   end
 
   private
@@ -209,8 +227,8 @@ Created-By: #{config[:author]}
     ENV['GEM_HOME']
   end
 
-  def global_gem_home
-    gem_home.gsub(config[:project_name], 'global')
+  def global_gem_home gemset_name
+    gem_home.gsub(gemset_name, 'global')
   end
 
   def included_global_gems

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+  <resource-ref>
+    <res-ref-name><%= config[:jndi_resource_name] %></res-ref-name>
+    <jndi-name>java:/<%= config[:jndi_name] %></jndi-name>
+    <res-type>javax.sql.DataSource</res-type>
+  </resource-ref>
+</jboss-web>
+
