@@ -12,16 +12,6 @@ class WebAppBuilder
 
   WARFILE_NAME = "Warfile"
 
-  #JRUBY_JARS_VERSION         = Gem.loaded_specs["jruby-jars"].version
-  #JRUBY_RACK_VERSION         = Gem.loaded_specs["jruby-rack"].version
-  #JRUBY_OPENSSL_VERSION      = Gem.loaded_specs["jruby-openssl"].version
-  #BOUNCY_CASTLE_JAVA_VERSION = Gem.loaded_specs["bouncy-castle-java"].version
-
-  JRUBY_JARS_VERSION         = "1"
-  JRUBY_RACK_VERSION         = "1"
-  JRUBY_OPENSSL_VERSION      = "0.7.6.1"
-  BOUNCY_CASTLE_JAVA_VERSION = "1.5.0146.1"
-
   attr_reader :build_dir, :basedir, :config
 
   def initialize build_dir, basedir, gemset_name
@@ -71,13 +61,14 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
                 :filter => included_specs(gems)
       directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
-      :filter => included_global_gems
+      :filter => included_global_gems(gems)
       directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-      :filter => included_global_specs
+      :filter => included_global_specs(gems)
 
-      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{JRUBY_OPENSSL_VERSION}/lib/shared",
+      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/lib",
+      directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{gem_version(gems,
+                                                                                       "bouncy-castle-java-jars")}/lib",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
@@ -87,8 +78,11 @@ Created-By: #{config[:author]}
 
       directory :to_dir => "WEB-INF/log"
 
-      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{JRUBY_RACK_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{JRUBY_JARS_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{gem_version(gems, "jruby-rack")}/lib",
+                :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{gem_version(gems, "jruby-jars")}/lib",
+                :to_dir => "WEB-INF/lib",
+                :filter => "*.jar"
 
       jars(gems).each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
@@ -127,11 +121,11 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
                 :filter => included_specs(gems)
       directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
-      :filter => included_global_gems
+      :filter => included_global_gems(gems)
       directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-      :filter => included_global_specs
+      :filter => included_global_specs(gems)
 
-      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{JRUBY_OPENSSL_VERSION}/lib/shared",
+      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/lib",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
@@ -141,8 +135,10 @@ Created-By: #{config[:author]}
         file :name => jar, :to_dir => "WEB-INF/lib"
       end if config[:additional_java_jars]
 
-      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{JRUBY_RACK_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{JRUBY_JARS_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{gem_version(gems, "jruby-rack")}/lib",
+                :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{gem_version(gems, "jruby-jars")}/lib",
+                :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
       jars(gems).each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
@@ -185,6 +181,12 @@ Created-By: #{config[:author]}
 
   private
 
+  def gem_version gems, name
+    gem = gems.find {|gem| gem.name == name }
+
+    gem.nil? ? nil : gem.version
+  end
+
   def ruby_home
     ENV['MY_RUBY_HOME']
   end
@@ -197,12 +199,15 @@ Created-By: #{config[:author]}
     gem_home.gsub(gemset_name, 'global')
   end
 
-  def included_global_gems
-    "jruby-openssl-#{JRUBY_OPENSSL_VERSION}/**/*, bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/**/*"
+  def included_global_gems gems
+    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}/**/*, bouncy-castle-java-#{gem_version(gems,
+                                                                                                'bouncy-castle-java-jars')}/**/*"
   end
 
-  def included_global_specs
-    "jruby-openssl-#{JRUBY_OPENSSL_VERSION}.gemspec, bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}.gemspec"
+  def included_global_specs gems
+    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}.gemspec, bouncy-castle-java-#{gem_version(gems,
+                                                                                                  'bouncy-castle-java-jars')}
+.gemspec"
   end
 
   def included_gems gems

@@ -5,6 +5,10 @@ group :default do
   gem "meta_methods"
   gem "file_utils"
   gem "zip_dsl"
+  gem "jruby-jars"
+  gem "jruby-rack"
+  gem "jruby-openssl"
+  gem "bouncy-castle-java"
 end
 
 group :development do
