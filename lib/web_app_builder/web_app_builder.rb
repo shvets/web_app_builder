@@ -50,24 +50,7 @@ class WebAppBuilder
     configure
 
     gems = bundler_gems
-
-    # binding
-    #build_dir = @build_dir
-    #gem_home = gem_home()
-    #global_gem_home = global_gem_home()
-    #config = @config
-    #ruby_home = ruby_home()
-    ##included_global_gems = included_global_gems()
-    ##included_global_specs = included_global_specs()
-    #included_gems = included_gems(gems)
-    #included_specs = included_specs(gems)
-    #jars = jars(gems)
-    ##basedir = basedir()
-
-
     global_gem_home = global_gem_home(@gemset_name)
-
-    p global_gem_home
 
     manifest = <<-TEXT
 Built-By: web_app_builder
@@ -127,22 +110,9 @@ Created-By: #{config[:author]}
 
     gems = bundler_gems
 
-    # binding
-    #build_dir = @build_dir
-    #gem_home = gem_home()
-    #global_gem_home = global_gem_home()
-    #config = @config
-    #ruby_home = ruby_home()
-    ##included_global_gems = included_global_gems()
-    ##included_global_specs = included_global_specs()
-    #included_gems = included_gems(gems)
-    #included_specs = included_specs(gems)
-    #jars = jars(gems)
-    #basedir = basedir()
-
     global_gem_home = global_gem_home(@gemset_name)
 
-    builder = DirectoryBuilder.new to_dir
+    builder = DirectoryBuilder.new to_dir, basedir
 
     builder.build do
       directory :from_dir => "#{build_dir}/WEB-INF", :to_dir => "WEB-INF"
@@ -171,8 +141,6 @@ Created-By: #{config[:author]}
         file :name => jar, :to_dir => "WEB-INF/lib"
       end if config[:additional_java_jars]
 
-      #directory :to_dir => "WEB-INF/log"
-
       directory :from_dir => "#{gem_home}/gems/jruby-rack-#{JRUBY_RACK_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{gem_home}/gems/jruby-jars-#{JRUBY_JARS_VERSION}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
@@ -184,33 +152,31 @@ Created-By: #{config[:author]}
       file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
 
       directory :from_dir => "public"
-
-      #content :name => "MANIFEST.MF", :to_dir => "META-INF", :source => manifest
     end
   end
 
   def process_templates dir
     configure
 
-    process_dir(dir) do |entry_name|
+    with_dir(dir) do |entry_name|
       if entry_name == "META-INF"
-        process_dir("#{dir}/META-INF") do |entry_name2|
-          new_content = substitute_vars("#{dir}/META-INF/#{entry_name2}")
+        with_dir("#{dir}/META-INF") do |entry_name2|
+          new_content = execute_template("#{dir}/META-INF/#{entry_name2}", binding)
 
           create_directory "#{build_dir}/META-INF/"
 
           write_content_to_file new_content, "#{build_dir}/META-INF/#{entry_name2}"
         end
       elsif entry_name == "WEB-INF"
-        process_dir("#{dir}/WEB-INF") do |entry_name2|
-          new_content = substitute_vars("#{dir}/WEB-INF/#{entry_name2}")
+        with_dir("#{dir}/WEB-INF") do |entry_name2|
+          new_content = execute_template("#{dir}/WEB-INF/#{entry_name2}", binding)
 
           create_directory "#{build_dir}/WEB-INF/"
 
           write_content_to_file new_content, "#{build_dir}/WEB-INF/#{entry_name2}"
         end
       else
-        new_content = substitute_vars("#{dir}/#{entry_name}")
+        new_content = execute_template("#{dir}/#{entry_name}", binding)
 
         write_content_to_file new_content, "#{build_dir}/#{entry_name}"
       end

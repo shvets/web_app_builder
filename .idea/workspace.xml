@@ -2,20 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2b687ec-cc2c-4fad-80ed-a1ad14b97798" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Warfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/templates/META-INF/context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/templates/WEB-INF/jboss-web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/templates/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/templates/postgres-ds.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/META-INF/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/META-INF/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/WEB-INF/jboss-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/jboss-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/postgres-ds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/templates/META-INF/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/templates/WEB-INF/jboss-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/templates/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/templates/postgres-ds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/config/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/jboss-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/lib/bcmail-jdk15-146.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/lib/bcprov-jdk15-146.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/lib/jruby.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/lib/web_app_builder.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/exploded/WEB-INF/web.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/web_app_builder.iml" afterPath="$PROJECT_DIR$/.idea/web_app_builder.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.rvmrc" afterPath="$PROJECT_DIR$/.rvmrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/web_app_builder.rb" afterPath="$PROJECT_DIR$/lib/web_app_builder.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" afterPath="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_app_builder.gemspec" afterPath="$PROJECT_DIR$/web_app_builder.gemspec" />
     </list>
     <ignored path="web_app_builder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +47,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web_app_builder_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web_app_builder_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="108" selection-end="108" vertical-scroll-proportion="0.10372771">
+            <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,16 +59,43 @@
       <file leaf-file-name="web_app_builder.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.0">
+            <state line="33" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="meta_methods.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/jruby-1.6.7@web_app_builder/gems/meta_methods-1.0.1/lib/meta_methods/meta_methods.rb">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.3/lib/meta_methods/meta_methods.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
+            <state line="46" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="10" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meta_methods.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.4/lib/meta_methods/meta_methods.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="29" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.1">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".rvmrc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.rvmrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="26" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,18 +120,20 @@
         <option value="$PROJECT_DIR$/lib/web_app_builder/version.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/lib/web_app_builder.rb" />
-        <option value="$PROJECT_DIR$/.rvmrc" />
         <option value="$USER_HOME$/.rvm/gems/jruby-1.6.7@web_app_builder/gems/zip_dsl-1.0.3/lib/zip_dsl/zip_dsl.rb" />
         <option value="$PROJECT_DIR$/Warfile" />
-        <option value="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
         <option value="$USER_HOME$/.rvm/gems/jruby-1.6.7@web_app_builder/gems/meta_methods-1.0.1/lib/meta_methods/meta_methods.rb" />
         <option value="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
+        <option value="$PROJECT_DIR$/.rvmrc" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
+        <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.4/lib/meta_methods/meta_methods.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="157" />
-    <option name="y" value="52" />
+    <option name="x" value="240" />
+    <option name="y" value="142" />
     <option name="width" value="1588" />
     <option name="height" value="1058" />
   </component>
@@ -147,7 +186,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="meta_methods (v1.0.1, RVM: jruby-1.6.7 [web_app_builder]) [gem]" />
+              <option name="myItemId" value="meta_methods (v1.0.3, RVM: ruby-1.9.3-p194 [web_app_builder]) [gem]" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -165,7 +204,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="meta_methods (v1.0.1, RVM: jruby-1.6.7 [web_app_builder]) [gem]" />
+              <option name="myItemId" value="meta_methods (v1.0.3, RVM: ruby-1.9.3-p194 [web_app_builder]) [gem]" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -187,7 +226,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="meta_methods (v1.0.1, RVM: jruby-1.6.7 [web_app_builder]) [gem]" />
+              <option name="myItemId" value="meta_methods (v1.0.3, RVM: ruby-1.9.3-p194 [web_app_builder]) [gem]" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,38 +378,6 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="web_app_builder_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="web_app_builder" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="WebAppBuilder should create new exploded directory with files" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="web_app_builder" />
@@ -393,6 +400,38 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="WebAppBuilder should create new exploded directory with files" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="web_app_builder_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="web_app_builder" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -475,15 +514,16 @@
     </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new zip file with files at particular folder" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new zip file with files at particular folder" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
         <item index="3" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
       </list>
     </recent_temporary>
   </component>
@@ -507,7 +547,7 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="ToolWindowManager">
-    <frame x="157" y="52" width="1588" height="1058" extended-state="0" />
+    <frame x="240" y="142" width="1588" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -515,16 +555,16 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67013526" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958376" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.60041624" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39958376" sideWeight="0.4948052" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.39740258" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.59805197" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39958376" sideWeight="0.50064933" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5948052" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.4974026" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -587,24 +627,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/web_app_builder_spec.rb</url>
-          <line>2</line>
+          <url>file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb</url>
+          <line>14</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb</url>
-          <line>14</line>
+          <line>69</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.4/lib/meta_methods/meta_methods.rb</url>
+          <line>41</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="67" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
@@ -619,19 +656,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="27" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
@@ -659,28 +686,54 @@
         <state line="12" column="26" selection-start="301" selection-end="301" vertical-scroll-proportion="0.31118315" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.rvmrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/jruby-1.6.7@web_app_builder/gems/meta_methods-1.0.1/lib/meta_methods/meta_methods.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="55" column="13" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.1961102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
+    <entry file="file://$PROJECT_DIR$/.rvmrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.0">
+        <state line="3" column="26" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="108" selection-end="108" vertical-scroll-proportion="0.10372771">
+        <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.3/lib/meta_methods/meta_methods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@web_app_builder/gems/meta_methods-1.0.4/lib/meta_methods/meta_methods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="29" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.1">
           <folding />
         </state>
       </provider>
