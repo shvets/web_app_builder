@@ -5,10 +5,13 @@ group :default do
   gem "meta_methods"
   gem "file_utils"
   gem "zip_dsl"
-  gem "jruby-jars"
-  gem "jruby-rack"
-  gem "jruby-openssl"
-  gem "bouncy-castle-java"
+  
+  if RUBY_PLATFORM == 'java'
+    gem "jruby-jars"
+    gem "jruby-rack"
+    gem "jruby-openssl"
+    gem "bouncy-castle-java"
+  end
 end
 
 group :development do
