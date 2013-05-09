@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 group :default do
   gem "bundler"
@@ -20,6 +20,6 @@ group :development do
 end
 
 group :test do
-  gem "rspec", "2.9.0"
-  gem "mocha", "0.10.3"
+  gem "rspec"
+  gem "mocha"
 end

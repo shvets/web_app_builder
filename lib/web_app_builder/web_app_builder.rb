@@ -47,7 +47,7 @@ Built-By: web_app_builder
 Created-By: #{config[:author]}
     TEXT
 
-    builder = Zip::DSL.new "#{build_dir}/#{config[:project_name]}.war", "."
+    builder = ZipDSL.new "#{build_dir}/#{config[:project_name]}.war", "."
 
     builder.build do
       directory :from_dir => "#{build_dir}/WEB-INF", :to_dir => "WEB-INF"
@@ -127,8 +127,8 @@ Created-By: #{config[:author]}
 
       directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/lib",
-                :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      #directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/lib",
+      #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
       config[:additional_java_jars].each do |jar|
