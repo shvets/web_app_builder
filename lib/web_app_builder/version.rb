@@ -1,3 +1,3 @@
-module WebAppBuilder
+class WebAppBuilder
   VERSION = "1.0.4"
 end

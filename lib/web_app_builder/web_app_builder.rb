@@ -22,6 +22,8 @@ class WebAppBuilder
 
   def configure
     @config ||= locals_to_hash(self, read_file("#{basedir}/#{WARFILE_NAME}"))
+
+    config[:templates_dir] = "config/templates" unless config[:templates_dir]
   end
 
   def clean
@@ -39,7 +41,8 @@ class WebAppBuilder
   def war
     configure
 
-    gems = bundler_gems
+    all_gems = bundler_gems
+    gems = bundler_gems config[:groups_to_reject]
     global_gem_home = global_gem_home(@gemset_name)
 
     manifest = <<-TEXT
@@ -60,17 +63,20 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems(gems)
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
                 :filter => included_specs(gems)
-      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
-      :filter => included_global_gems(gems)
-      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-      :filter => included_global_specs(gems)
 
-      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
-                :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{gem_version(gems,
-                                                                                       "bouncy-castle-java-jars")}/lib",
-                :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems"
+      #,
+      #:filter => included_global_gems(gems)
+      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications"
+      #,
+      #:filter => included_global_specs(gems)
+
+      #directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
+      #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      #directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{gem_version(gems,
+      #                                                                                 "bouncy-castle-java-jars")}/lib",
+      #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      #directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
       config[:additional_java_jars].each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
@@ -78,20 +84,29 @@ Created-By: #{config[:author]}
 
       directory :to_dir => "WEB-INF/log"
 
-      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{gem_version(gems, "jruby-rack")}/lib",
-                :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{gem_version(gems, "jruby-jars")}/lib",
+      #directory :from_dir => "#{gem_home}/gems/jruby-core-#{gem_version(gems, "jruby-core")}/lib",
+      #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
+
+      directory :from_dir => "#{gem_home}/gems/jruby-jars-#{gem_version(all_gems, "jruby-jars")}/lib",
                 :to_dir => "WEB-INF/lib",
                 :filter => "*.jar"
+      directory :from_dir => "#{gem_home}/gems/jruby-rack-#{gem_version(all_gems, "jruby-rack")}/lib",
+                :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
       jars(gems).each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
-      file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
+      #file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
+      #file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
+      #
+      #file :name => "#{basedir}/Gemfile-jruby", :to_dir => "WEB-INF"
+      #file :name => "#{basedir}/Gemfile-jruby.lock", :to_dir => "WEB-INF"
 
-      directory :from_dir => "public"
+      file :name => Bundler.default_gemfile, :to_dir => "WEB-INF"
+      file :name => Bundler.default_lockfile, :to_dir => "WEB-INF"
+
+      directory :from_dir => "public", :to_dir => "."
 
       content :name => "MANIFEST.MF", :to_dir => "META-INF", :source => manifest
     end
@@ -102,7 +117,7 @@ Created-By: #{config[:author]}
 
     to_dir = "#{build_dir}/exploded"
 
-    gems = bundler_gems
+    gems = bundler_gems config[:groups_to_reject]
 
     global_gem_home = global_gem_home(@gemset_name)
 
@@ -120,21 +135,25 @@ Created-By: #{config[:author]}
       directory :from_dir => "#{gem_home}/gems", :to_dir => "WEB-INF/gems/gems", :filter => included_gems(gems)
       directory :from_dir => "#{gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
                 :filter => included_specs(gems)
-      directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems",
-      :filter => included_global_gems(gems)
-      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications",
-      :filter => included_global_specs(gems)
+      #directory :from_dir => "#{global_gem_home}/gems", :to_dir => "WEB-INF/gems/gems"
+      #,
+      #:filter => included_global_gems(gems)
+      directory :from_dir => "#{global_gem_home}/specifications", :to_dir => "WEB-INF/gems/specifications"
+      #,
+      #:filter => included_global_specs(gems)
 
-      directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
-                :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      #directory :from_dir => "#{global_gem_home}/gems/jruby-openssl-#{gem_version(gems, "jruby-openssl")}/lib/shared",
+      #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
       #directory :from_dir => "#{global_gem_home}/gems/bouncy-castle-java-#{BOUNCY_CASTLE_JAVA_VERSION}/lib",
       #          :to_dir => "WEB-INF/lib", :filter => "*.jar"
-      directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
+      #directory :from_dir => "#{ruby_home}/lib", :to_dir => "WEB-INF/lib", :filter => "*.jar"
 
       config[:additional_java_jars].each do |jar|
         file :name => jar, :to_dir => "WEB-INF/lib"
       end if config[:additional_java_jars]
 
+      directory :from_dir => "#{gem_home}/gems/jruby-core-#{gem_version(gems, "jruby-core")}/lib",
+                :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{gem_home}/gems/jruby-rack-#{gem_version(gems, "jruby-rack")}/lib",
                 :to_dir => "WEB-INF/lib", :filter => "*.jar"
       directory :from_dir => "#{gem_home}/gems/jruby-jars-#{gem_version(gems, "jruby-jars")}/lib",
@@ -144,37 +163,30 @@ Created-By: #{config[:author]}
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
-      file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
+      file :name => Bundler.default_gemfile, :to_dir => "WEB-INF"
+      file :name => Bundler.default_lockfile, :to_dir => "WEB-INF"
 
-      directory :from_dir => "public"
+      directory :from_dir => "public", :to_dir => "."
     end
   end
 
   def process_templates dir
     configure
 
-    with_dir(dir) do |entry_name|
-      if entry_name == "META-INF"
-        with_dir("#{dir}/META-INF") do |entry_name2|
-          new_content = execute_template("#{dir}/META-INF/#{entry_name2}", binding)
+    Dir["#{dir}/**/*.*"].map {|name| name[dir.size+1..-1]}.each do |name|
+      file_name = "#{dir}/#{name}"
 
-          create_directory "#{build_dir}/META-INF/"
+      if File.dirname(name) != "."
+        create_directory "#{build_dir}/#{File.dirname(name)}"
+      end
 
-          write_content_to_file new_content, "#{build_dir}/META-INF/#{entry_name2}"
-        end
-      elsif entry_name == "WEB-INF"
-        with_dir("#{dir}/WEB-INF") do |entry_name2|
-          new_content = execute_template("#{dir}/WEB-INF/#{entry_name2}", binding)
+       begin
+        new_content = execute_template(file_name, binding)
 
-          create_directory "#{build_dir}/WEB-INF/"
-
-          write_content_to_file new_content, "#{build_dir}/WEB-INF/#{entry_name2}"
-        end
-      else
-        new_content = execute_template("#{dir}/#{entry_name}", binding)
-
-        write_content_to_file new_content, "#{build_dir}/#{entry_name}"
+        write_content_to_file new_content, "#{build_dir}/#{name}"
+      rescue
+        puts "Exception while processing #{file_name} file."
+        puts e
       end
     end if File.exist?(dir)
   end
@@ -199,16 +211,16 @@ Created-By: #{config[:author]}
     gem_home.gsub(gemset_name, 'global')
   end
 
-  def included_global_gems gems
-    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}/**/*, bouncy-castle-java-#{gem_version(gems,
-                                                                                                'bouncy-castle-java-jars')}/**/*"
-  end
-
-  def included_global_specs gems
-    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}.gemspec, bouncy-castle-java-#{gem_version(gems,
-                                                                                                  'bouncy-castle-java-jars')}
-.gemspec"
-  end
+#  def included_global_gems gems
+#    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}/**/*, bouncy-castle-java-#{gem_version(gems,
+#                                                                                                'bouncy-castle-java-jars')}/**/*"
+#  end
+#
+#  def included_global_specs gems
+#    "jruby-openssl-#{gem_version(gems, 'jruby-openssl')}.gemspec, bouncy-castle-java-#{gem_version(gems,
+#                                                                                                  'bouncy-castle-java-jars')}
+#.gemspec"
+#  end
 
   def included_gems gems
     gems.collect {|gem| "#{gem_folder(gem)}/**/*"}
@@ -238,10 +250,10 @@ Created-By: #{config[:author]}
     "#{gem.name}-#{gem.version}#{(gem.platform.to_s == 'java') ? '-java' : ''}.gemspec"
   end
 
-  def bundler_gems
+  def bundler_gems groups_to_reject=[]
     orig_without_groups = Bundler.settings.without
 
-    Bundler.settings.without = config[:groups_to_reject]
+    Bundler.settings.without = groups_to_reject
 
     gems = Bundler::Definition.build(Bundler.default_gemfile, Bundler.default_lockfile, nil).requested_specs
 
