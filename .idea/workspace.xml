@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES" afterPath="$PROJECT_DIR$/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/web_app_builder/version.rb" afterPath="$PROJECT_DIR$/lib/web_app_builder/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="web_app_builder.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371494810977" ignored="false" />
+    <file path="/Dummy.txt" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371494828172" ignored="false" />
     <file path="$PROJECT_DIR$/../rails-app-tmpl/Warfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371223992883" ignored="false" />
     <file path="/a.dummy" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371224829334" ignored="false" />
     <file path="$PROJECT_DIR$/../rails-app-tmpl/Rakefile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371225389006" ignored="false" />
@@ -82,6 +84,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CHANGES" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CHANGES">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="11" selection-start="102" selection-end="102" vertical-scroll-proportion="0.20285262">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="web_app_builder_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_app_builder.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web_app_builder.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.40570524">
+            <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
                 <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
@@ -112,6 +123,15 @@
                 <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
                 <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/web_app_builder/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,6 +156,8 @@
       <list>
         <option value="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
         <option value="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/web_app_builder/version.rb" />
+        <option value="$PROJECT_DIR$/CHANGES" />
       </list>
     </option>
   </component>
@@ -539,7 +561,11 @@
       <created>1371494814592</created>
       <updated>1371494814592</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug fixes; support new version of jruby">
+      <created>1371494831667</created>
+      <updated>1371494831667</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -547,7 +573,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,20 +662,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.ruby-version">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
@@ -755,16 +767,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.40570524">
+        <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
             <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
@@ -773,6 +778,27 @@
             <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
             <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="102" selection-end="102" vertical-scroll-proportion="0.20285262">
+          <folding />
         </state>
       </provider>
     </entry>
