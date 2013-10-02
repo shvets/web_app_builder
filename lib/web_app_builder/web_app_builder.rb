@@ -1,10 +1,10 @@
 require 'bundler'
-require 'meta_methods'
+require 'meta_methods/meta_methods'
 
 require 'file_utils/file_utils'
 require 'zip_dsl/zip_dsl'
 require 'zip_dsl/zip_writer'
-require 'directory_builder'
+require 'dir_dsl/dir_dsl'
 
 class WebAppBuilder
   include MetaMethods
@@ -50,7 +50,7 @@ Built-By: web_app_builder
 Created-By: #{config[:author]}
     TEXT
 
-    builder = ZipDSL.new "#{build_dir}/#{config[:project_name]}.war", "."
+    builder = ZipDSL.new ".", "#{build_dir}", "#{config[:project_name]}.war"
 
     builder.build do
       directory :from_dir => "#{build_dir}/WEB-INF", :to_dir => "WEB-INF"
@@ -97,14 +97,11 @@ Created-By: #{config[:author]}
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      #file :name => "#{basedir}/Gemfile", :to_dir => "WEB-INF"
-      #file :name => "#{basedir}/Gemfile.lock", :to_dir => "WEB-INF"
-      #
-      #file :name => "#{basedir}/Gemfile-jruby", :to_dir => "WEB-INF"
-      #file :name => "#{basedir}/Gemfile-jruby.lock", :to_dir => "WEB-INF"
+      #file :name => "Gemfile-jruby", :from_dir => basedir, :to_dir => "WEB-INF"
+      #file :name => "Gemfile-jruby.lock", :from_dir => basedir, :to_dir => "WEB-INF"
 
-      file :name => Bundler.default_gemfile, :to_dir => "WEB-INF"
-      file :name => Bundler.default_lockfile, :to_dir => "WEB-INF"
+      file :name => File.basename(Bundler.default_gemfile), :from_dir => File.dirname(Bundler.default_gemfile), :to_dir => "WEB-INF"
+      file :name => File.basename(Bundler.default_lockfile), :from_dir => File.dirname(Bundler.default_lockfile), :to_dir => "WEB-INF"
 
       directory :from_dir => "public", :to_dir => "."
 
@@ -121,7 +118,7 @@ Created-By: #{config[:author]}
 
     global_gem_home = global_gem_home(@gemset_name)
 
-    builder = DirectoryBuilder.new to_dir, basedir
+    builder = DirDSL.new basedir, to_dir
 
     builder.build do
       directory :from_dir => "#{build_dir}/WEB-INF", :to_dir => "WEB-INF"
@@ -163,8 +160,8 @@ Created-By: #{config[:author]}
         file :name => jar, :to_dir => "WEB-INF/lib"
       end
 
-      file :name => Bundler.default_gemfile, :to_dir => "WEB-INF"
-      file :name => Bundler.default_lockfile, :to_dir => "WEB-INF"
+      file :name => File.basename(Bundler.default_gemfile), :from_dir => File.dirname(Bundler.default_gemfile), :to_dir => "WEB-INF"
+      file :name => File.basename(Bundler.default_lockfile), :from_dir => File.dirname(Bundler.default_lockfile), :to_dir => "WEB-INF"
 
       directory :from_dir => "public", :to_dir => "."
     end

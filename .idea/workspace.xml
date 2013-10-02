@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ruby-version" afterPath="$PROJECT_DIR$/.ruby-version" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES" afterPath="$PROJECT_DIR$/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/web_app_builder/version.rb" afterPath="$PROJECT_DIR$/lib/web_app_builder/version.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_app_builder.gemspec.erb" afterPath="$PROJECT_DIR$/web_app_builder.gemspec.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_app_builder.gemspec" afterPath="$PROJECT_DIR$/web_app_builder.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/web_app_builder.iml" afterPath="$PROJECT_DIR$/.idea/web_app_builder.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" afterPath="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="web_app_builder.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371494828172" ignored="false" />
+    <file path="/Dummy.txt" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380732140022" ignored="false" />
     <file path="$PROJECT_DIR$/../rails-app-tmpl/Warfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371223992883" ignored="false" />
     <file path="/a.dummy" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371224829334" ignored="false" />
     <file path="$PROJECT_DIR$/../rails-app-tmpl/Rakefile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371225389006" ignored="false" />
@@ -44,18 +54,72 @@
     <file path="$PROJECT_DIR$/../server_launcher/Gemfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371226431775" ignored="false" />
     <file path="$PROJECT_DIR$/../server_launcher/.idea/workspace.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371226616145" ignored="false" />
     <file path="$PROJECT_DIR$/../rails-app-tmpl/Gemfile-jruby.lock" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371226602801" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/thor/builder.thor" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371229429833" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/thor/builder.thor" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495092062" ignored="false" />
     <file path="$USER_HOME$/work/ui/src/Gemfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371229692050" ignored="false" />
     <file path="$USER_HOME$/work/ui/src/Gemfile-jruby" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371229756351" ignored="false" />
     <file path="$USER_HOME$/work/ui/src/config/warble.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371229834836" ignored="false" />
     <file path="$USER_HOME$/.rvm/gems/jruby-1.7.4@r23/gems/web_app_builder-1.0.4/lib/web_app_builder/web_app_builder.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371236161995" ignored="false" />
     <file path="$USER_HOME$/work/ui/src/config/templates/META-INF/init.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240282515" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/WEB-INF/web.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/mysql-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/postgres-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/WEB-INF/jboss-web.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/META-INF/context.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
-    <file path="$USER_HOME$/work/ui/src/build/oracle-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371240431244" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/WEB-INF/web.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/mysql-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/postgres-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/WEB-INF/jboss-web.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/META-INF/context.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/oracle-ds.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build/META-INF/init.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495966550" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/Warfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371495155667" ignored="false" />
+    <file path="$USER_HOME$/work/ui/src/build2/META-INF/init.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371496050410" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/lib/zip_dsl/zip_dsl.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371497241933" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/spec/directory_builder_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371496326954" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/spec/zip_builder_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371499877102" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/lib/zip_dsl/zip_updater.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371499833294" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/lib/zip_dsl.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371497441389" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/lib/zip_dsl/version.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371499930482" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/CHANGES" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371500133487" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/.ruby-version" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1371500103371" ignored="false" />
+    <file path="/.gitignore" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380664535519" ignored="false" />
+    <file path="$PROJECT_DIR$/../zip_dsl/.idea/workspace.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731725550" ignored="false" />
+    <file path="/web_app_builder.gemspec.erb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380664700012" ignored="false" />
+    <file path="/Gemfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731489957" ignored="false" />
+    <file path="/web_app_builder.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380732375784" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/requests/cars_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727444930" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/api/carts_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727369785" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/requests/requests_spec_helper.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727239037" ignored="false" />
+    <file path="/requests_spec_helper.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727239037" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/support/spec_conf.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727649354" ignored="false" />
+    <file path="/spec_conf.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727588016" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/support/requests_shared_context.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727339843" ignored="false" />
+    <file path="/requests_shared_context.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727339843" ignored="false" />
+    <file path="/cars_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727387777" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/routing/carts_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727701269" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/requests/carts_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727649354" ignored="false" />
+    <file path="/carts_controller_spec.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727694965" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/routing/routing_spec_helper.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727568126" ignored="false" />
+    <file path="/routing_spec_helper.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727568126" ignored="false" />
+    <file path="$USER_HOME$/work/ui/neptune/spec/support/routing_shared_context.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727610044" ignored="false" />
+    <file path="/routing_shared_context.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380727610044" ignored="false" />
+    <file path="/zip_dsl.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380730159971" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/lib/meta_methods/version.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731064434" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/.ruby-gemset" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731026702" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/.ruby-version" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731037787" ignored="false" />
+    <file path="/.ruby-version" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731037138" ignored="false" />
+    <file path="/version.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731064434" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/Gemfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731101869" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/Rakefile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731156382" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/lib/meta_methods/meta_methods.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731354519" ignored="false" />
+    <file path="/meta_methods.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731311028" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/LICENSE" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731383408" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/meta_methods.gemspec.erb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731390857" ignored="false" />
+    <file path="/meta_methods.gemspec.erb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731389668" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/CHANGES" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731416906" ignored="false" />
+    <file path="/CHANGES" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731416906" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/meta_methods.gemspec" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731432518" ignored="false" />
+    <file path="$PROJECT_DIR$/../meta_methods/.idea/workspace.xml" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731462477" ignored="false" />
+    <file path="$PROJECT_DIR$/../dir_dsl/Gemfile" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731492240" ignored="false" />
+    <file path="$PROJECT_DIR$/../dir_dsl/lib/dir_dsl/dir_dsl.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731571736" ignored="false" />
+    <file path="/dir_dsl.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731560121" ignored="false" />
+    <file path="$PROJECT_DIR$/../dir_dsl/lib/dir_dsl/version.rb" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731625339" ignored="false" />
+    <file path="$PROJECT_DIR$/../dir_dsl/CHANGES" changelist="3dbfd431-443c-41f5-a4e2-c470b5bdfeee" time="1380731633103" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +142,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CHANGES" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CHANGES">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="11" selection-start="102" selection-end="102" vertical-scroll-proportion="0.20285262">
+            <state line="0" column="0" selection-start="0" selection-end="29" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,41 +151,52 @@
       <file leaf-file-name="web_app_builder_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="28" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+            <state line="3" column="24" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".ruby-version" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.ruby-version">
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
+            <state line="11" column="46" selection-start="0" selection-end="1011" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_app_builder.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="web_app_builder.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
-                <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
-                <marker date="1371226880000" expanded="true" signature="6790:7174" placeholder="if ... end" />
-                <marker date="1371226880000" expanded="true" signature="6790:6934" placeholder="do ... end" />
-                <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
-                <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
-              </folding>
+            <state line="104" column="29" selection-start="3937" selection-end="3937" vertical-scroll-proportion="2.637084">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/web_app_builder/version.rb">
+      <file leaf-file-name="zip_dsl.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@web_app_builder/gems/zip_dsl-1.3.1/lib/zip_dsl/zip_dsl.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="52" column="26" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".ruby-gemset" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.ruby-gemset">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="object.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/rubystubs193/object.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="709" column="8" selection-start="24991" selection-end="24991" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,10 +220,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
         <option value="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.ruby-version" />
+        <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/web_app_builder/version.rb" />
         <option value="$PROJECT_DIR$/CHANGES" />
+        <option value="$PROJECT_DIR$/web_app_builder.gemspec.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@web_app_builder/gems/zip_dsl-1.3.1/lib/zip_dsl/zip_dsl.rb" />
+        <option value="$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb" />
       </list>
     </option>
   </component>
@@ -226,118 +298,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_app_builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -350,7 +310,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="RSpec.web_app_builder_spec">
+  <component name="RunManager" selected="RSpec.WebAppBuilder">
     <configuration default="false" name="WebAppBuilder should create new zip file with files at particular folder" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="web_app_builder" />
@@ -420,6 +380,40 @@
       <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WebAppBuilder" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="web_app_builder" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/web_app_builder_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="WebAppBuilder" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
@@ -533,16 +527,19 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new zip file with files at particular folder" />
       <item index="1" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.WebAppBuilder" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new zip file with files at particular folder" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.WebAppBuilder" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new exploded directory with files" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.WebAppBuilder should create new zip file with files at particular folder" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.web_app_builder_spec" />
       </list>
     </recent_temporary>
   </component>
@@ -565,23 +562,27 @@
       <created>1371494831667</created>
       <updated>1371494831667</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bug fixes; support new version of jruby">
+      <created>1371494927242</created>
+      <updated>1371494927242</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="118" y="22" width="1704" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25874546" sideWeight="0.67039675" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26537997" sideWeight="0.67039675" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -662,142 +663,95 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.ruby-version">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="57" selection-start="0" selection-end="9046" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
-            <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:7174" placeholder="if ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:6934" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.ruby-version">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="67" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
-            <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:7174" placeholder="if ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:6934" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.ruby-version">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="145" selection-start="4733" selection-end="4733" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
-            <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:7174" placeholder="if ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:6934" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
-          </folding>
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="176" selection-end="176" vertical-scroll-proportion="0.5071315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.ruby-version">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="10" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="58" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1371226880000" expanded="true" signature="5489:5654" placeholder="#..." />
-            <marker date="1371226880000" expanded="true" signature="6790:7181" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:7174" placeholder="if ... end" />
-            <marker date="1371226880000" expanded="true" signature="6790:6934" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="6935:7173" placeholder="do ... end" />
-            <marker date="1371226880000" expanded="true" signature="7539:8067" placeholder=" ... end" />
-          </folding>
-        </state>
+        <state line="0" column="125" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/web_app_builder/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+        <state line="1" column="18" selection-start="38" selection-end="38" vertical-scroll-proportion="0.025356578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGES">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="102" selection-end="102" vertical-scroll-proportion="0.20285262">
+        <state line="10" column="16" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app_builder.gemspec.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="798" selection-end="798" vertical-scroll-proportion="-12.16" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Warfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@web_app_builder/gems/zip_dsl-1.1.0/lib/zip_dsl/zip_dsl.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="30" selection-end="30" vertical-scroll-proportion="0.050713155" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs193/object.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="709" column="8" selection-start="24991" selection-end="24991" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ruby-gemset">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="29" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@web_app_builder/gems/zip_dsl-1.3.1/lib/zip_dsl/zip_dsl.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="26" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="46" selection-start="0" selection-end="1011" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/web_app_builder_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/web_app_builder/web_app_builder.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="29" selection-start="3937" selection-end="3937" vertical-scroll-proportion="2.637084">
           <folding />
         </state>
       </provider>

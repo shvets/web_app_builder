@@ -4,6 +4,7 @@ group :default do
   gem "bundler"
   gem "meta_methods"
   gem "file_utils"
+  gem "dir_dsl"
   gem "zip_dsl"
   
   if RUBY_PLATFORM == 'java'

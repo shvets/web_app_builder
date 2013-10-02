@@ -19,10 +19,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "meta_methods", [">= 0"]
   spec.add_runtime_dependency "file_utils", [">= 0"]
   spec.add_runtime_dependency "zip_dsl", [">= 0"]
-  spec.add_runtime_dependency "jruby-jars", [">= 0"]
-  spec.add_runtime_dependency "jruby-rack", [">= 0"]
-  spec.add_runtime_dependency "jruby-openssl", [">= 0"]
-  spec.add_runtime_dependency "bouncy-castle-java", [">= 0"]
   spec.add_development_dependency "gemspec_deps_gen", [">= 0"]
   spec.add_development_dependency "gemcutter", [">= 0"]
   

@@ -6,20 +6,25 @@ require "rspec/core/rake_task"
 require "web_app_builder/version"
 require "gemspec_deps_gen/gemspec_deps_gen"
 
-def version
-  WebAppBuilder::VERSION
-end
+version = WebAppBuilder::VERSION
+project_name = File.basename(Dir.pwd)
 
-def project_name
-  File.basename(Dir.pwd)
-end
-
-task :build do
+task :gen do
   generator = GemspecDepsGen.new
 
-  generator.generate_dependencies "#{project_name}.gemspec.erb", "#{project_name}.gemspec"
+  generator.generate_dependencies "spec", "#{project_name}.gemspec.erb", "#{project_name}.gemspec"
+end
 
+task :build => :gen do
   system "gem build #{project_name}.gemspec"
+end
+
+task :install do
+  system "gem install #{project_name}-#{version}.gem"
+end
+
+task :uninstall do
+  system "gem uninstall #{project_name}"
 end
 
 task :release => :build do
@@ -31,4 +36,8 @@ RSpec::Core::RakeTask.new do |task|
   task.verbose = false
 end
 
+task :fix_debug do
+  system "mkdir -p $GEM_HOME/gems/debugger-ruby_core_source-1.2.3/lib"
+  system "cp -R ~/debugger-ruby_core_source/lib $GEM_HOME/gems/debugger-ruby_core_source-1.2.3"
+end
 
