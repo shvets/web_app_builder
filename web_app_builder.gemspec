@@ -14,13 +14,16 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
   spec.version       = WebAppBuilder::VERSION
+  spec.license       = "MIT"
 
+  
   spec.add_runtime_dependency "bundler", [">= 0"]
   spec.add_runtime_dependency "meta_methods", [">= 0"]
   spec.add_runtime_dependency "file_utils", [">= 0"]
+  spec.add_runtime_dependency "dir_dsl", [">= 0"]
   spec.add_runtime_dependency "zip_dsl", [">= 0"]
   spec.add_development_dependency "gemspec_deps_gen", [">= 0"]
   spec.add_development_dependency "gemcutter", [">= 0"]
-  
+
 end
 
