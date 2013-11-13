@@ -50,7 +50,7 @@ Built-By: web_app_builder
 Created-By: #{config[:author]}
     TEXT
 
-    builder = ZipDSL.new ".", "#{build_dir}", "#{config[:project_name]}.war"
+    builder = ZipDSL.new "#{build_dir}/#{config[:project_name]}.war", "."
 
     builder.build do
       directory :from_dir => "#{build_dir}/WEB-INF", :to_dir => "WEB-INF"

@@ -15,3 +15,7 @@
 == Version 1.0.7
 
 * Adding version to gemspec.
+
+== Version 1.0.8
+
+* Applying changes in ZipDSL and DirDSL libraries.
